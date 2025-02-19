@@ -12,8 +12,10 @@ public class UrlController {
     private final UrlAnalysisService urlAnalysisService;
 
     public void analyzeURL(String url) {
+        //url 객체 생성
         urlAnalysisService.setUrlDTO(url);
-        urlAnalysisService.compareDataBase();
-        //urlAnalysisService.isExistenceDanger();
+
+        //url이 안전하다고 판단된 경우 result = false
+        boolean result = urlAnalysisService.checkDangerous();
     }
 }

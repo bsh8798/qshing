@@ -2,12 +2,9 @@ package qshing.url_analyze.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.springframework.jdbc.core.JdbcTemplate;
 import qshing.url_analyze.dto.UrlDTO;
-import qshing.url_analyze.repository.BlackUrlRepository;
 import qshing.url_analyze.repository.RepositoryTmp;
-import qshing.url_analyze.repository.WhiteUrlRepository;
+import qshing.url_analyze.service.ExistBasedCheckService;
 import qshing.url_analyze.service.ExtractInfoService;
 import qshing.url_analyze.service.UrlAnalysisService;
 
@@ -15,6 +12,7 @@ class UrlControllerTest {
 
     RepositoryTmp repositoryTmp;
     ExtractInfoService extractInfoService;
+    ExistBasedCheckService existBasedCheckService;
     UrlAnalysisService urlAnalysisService;
     UrlController urlController;
 
@@ -22,7 +20,8 @@ class UrlControllerTest {
     void beforeEach() {
         repositoryTmp = new RepositoryTmp();
         extractInfoService = new ExtractInfoService();
-        urlAnalysisService = new UrlAnalysisService(repositoryTmp, extractInfoService);
+        existBasedCheckService = new ExistBasedCheckService();
+        urlAnalysisService = new UrlAnalysisService(repositoryTmp, extractInfoService, existBasedCheckService);
         urlController = new UrlController(urlAnalysisService);
     }
 
