@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="qshing.url_analyze.controller.UrlControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-18T08:34:34" hostname="BOOK-Q0A3GM6L2R" time="0.306">
+  <properties/>
+  <testcase name="analysis()" classname="qshing.url_analyze.controller.UrlControllerTest" time="0.306"/>
+  <system-out><![CDATA[화이트리스트에 존재
+데이터베이스에 없음
+데이터베이스에 없음
+데이터베이스에 없음
+https 아님
+데이터베이스에 없음
+ip 주소 포함
+데이터베이스에 없음
+mailto: 포함
+데이터베이스에 없음
+확장자 포함
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
