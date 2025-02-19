@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import qshing.url_analyze.dto.UrlDTO;
 import qshing.url_analyze.repository.RepositoryTmp;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Component
 @Service
