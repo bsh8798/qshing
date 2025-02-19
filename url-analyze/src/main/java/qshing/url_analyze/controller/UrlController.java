@@ -24,5 +24,9 @@ public class UrlController {
 
         //url이 안전하다고 판단된 경우 result = false
         boolean result = urlAnalysisService.checkDangerous();
+
+        //분석 결과를 ResponseDTO로 반환 (URL과 분석 결과)
+        return new ResponseDTO(url, result);
     }
+
 }
